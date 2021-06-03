@@ -100,11 +100,9 @@ async function Whack(CurrentCoord)
   let Column = await getRandomInt(7);
  let _id = Row + "-" + Column;
  console.log("_id is " + _id);
- 
-document.getElementById(_id).setAttribute("onClick", `javascript: Whack(${_id});`);
-document.getElementById(_id).innerHTML = "Whack";
-var elem = document.getElementById(CurrentCoord);
-    elem.parentNode.removeChild(elem);
+  $("#" + _id).click(function() {
+ alert("Hello World");
+});
 }
 </script>
 </body>
